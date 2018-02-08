@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>pubsub Example</title>	
+	</head>
+	<body>
+		<div class="statsModule">
+			<h1>Stats</h1>
+			<span id="count"></span>
+		</div>
+		<div id="peopleModule">
+			<h1>People</h1>
+			<input placeholder="name" type="text" id="name" name="name"></input>
+			<button id="addPerson">Add</button>
+			<ul id="people">
+				<script id="people-template" type="text/template">
+					{{#people}}
+						<li>
+							<span>{{.}}</span>
+							<i class="del">X</i>
+						</li>
+					{{/people}}
+				</script>
+			</ul>
+		</div>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+		
+		<script src="pubsub.js"></script>
+		<script src="stats.js"></script>
+		<script src="people.js"></script>
+	</body>
+</html>
