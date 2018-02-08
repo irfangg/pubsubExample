@@ -2,6 +2,12 @@
 <html>
 	<head>
 		<title>pubsub Example</title>	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+   <link rel="stylesheet" href="style.css"></link>
+    
 	</head>
 	<body>
 		<div class="statsModule">
@@ -11,13 +17,13 @@
 		<div id="peopleModule">
 			<h1>People</h1>
 			<input placeholder="name" type="text" id="name" name="name"></input>
-			<button id="addPerson">Add</button>
+			<button id="addPerson" class="btn btn-sm btn-primary">Add</button>
 			<ul id="people">
 				<script id="people-template" type="text/template">
 					{{#people}}
 						<li>
 							<span>{{.}}</span>
-							<i class="del">X</i>
+							<i class="del glyphicon glyphicon-remove-circle"></i>
 						</li>
 					{{/people}}
 				</script>
